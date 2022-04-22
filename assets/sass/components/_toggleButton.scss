@@ -1,0 +1,24 @@
+.toggle-button {
+  position: absolute;
+  top: 1.125rem;
+  right: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 18px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  display: block;
+  background-color: black;
+  // border: 1px solid black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+// cambiar por un svg

@@ -1,0 +1,39 @@
+.main-content-article,
+.main-content-article button {
+  font-family: $raleway;
+}
+
+.brand-title {
+  font-family: $old-standard;
+  font-size: $large;
+  font-weight: $bold;
+}
+
+h1, .main-content-suscribe {
+  font-family: $old-standard;
+}
+
+h1 {
+  font-size: $xx-large;
+  font-weight: $bold;
+}
+
+.article-paragraph {
+  font-size: $small;
+  line-height: 1.5rem;
+}
+
+.suscribe-title {
+  font-size: $x-large;
+  letter-spacing: 0.6px;
+}
+
+.suscribe-label {
+  font-weight: $regular;
+  color: $light-gray !important;
+  font-size: $small;
+}
+
+.suscribe-vertical {
+  font-weight: $bold;
+}

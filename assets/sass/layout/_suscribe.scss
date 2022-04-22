@@ -1,0 +1,33 @@
+.main-content-suscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.suscribe-newsletter {
+  flex: 4 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2.25rem 1.2rem;
+}
+
+.suscribe-title {
+  margin-bottom: .5rem;
+}
+
+.suscribe-input {
+  margin-top: .5rem;
+  height: 2rem;
+}
+
+.main-content-suscribe :not(.suscribe-vertical, .suscribe-input) {
+  background-color: $smocky-black;
+  color: $white;
+}
+
+.suscribe-vertical {
+  writing-mode: vertical-lr;
+  padding: .5rem;
+  padding-left: .75rem;
+  margin-top: .5rem;
+}
