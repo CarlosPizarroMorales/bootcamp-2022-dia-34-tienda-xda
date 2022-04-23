@@ -1,8 +1,14 @@
 button {
   background: $white;
-  border: 1px solid $smocky-black;
+  border: 1px solid $granite-gray;
   padding: 0.5rem .75rem;
   font-size: $small;
   color: $smocky-black;
   font-weight: $bold;
+
+  @include responseTo($bpTablet) {
+    padding: .75rem 2rem;
+    border-color: $smocky-black;
+    font-size: $medium;
+  }
 }

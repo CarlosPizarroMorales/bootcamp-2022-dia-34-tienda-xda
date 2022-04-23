@@ -7,6 +7,10 @@
   justify-content: space-between;
   width: 22px;
   height: 18px;
+
+  @include responseTo($bpTablet) {
+    display: none;
+  }
 }
 
 .toggle-button .bar {
@@ -20,5 +24,3 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-
-// cambiar por un svg

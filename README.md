@@ -1,4 +1,5 @@
 ## Desafio "Tienda XDA"
+![presentacion][0]
 
 |Bootcamp 2022 Modulo 3|Desarrollo de la interfaz de usuario Web|
 |----|-----|
@@ -15,17 +16,54 @@ Este desafío consiste en un frontend de un sitio web, no funcional (solo HTML y
 - Utilizar y modificar al menos 1 elemento SVG.
 - Agregar transiciones y animaciones en elementos a elección personal.
 
+### IMPLEMENTACIóN
+
+1. Como ejercicio, se ha implementado completamente con CSS Flex, prescindiendo de Bootstrap.
+2. La estructura general es realmente simple: se consideran 3 grandes elementos: 
+   1. El navbar, independiente en todo *breakpoint*,
+   2. Un bloque `.main-banner` con la imagen principal, 
+   3. Un bloque `.main-content` que tiene tanto el contenido de texto como la sección negra de suscribirse. 
+3. Los dos últimos bloques se presentan según su *normal flow* hasta que se llega a la vista *desktop*, momento en que se los trata con `display: flex; flex-direction: row reverse` para lograr que la imagen quede detrás del contenido de texto. 
+4. El elemento en vertical se ha tratado con `writing-mode: vertical-lr`
+5. Se han utilizado dispositivos reales de Apple como targets para trabajar en las distintas vistas porque ya en desafíos anteriores se han entregado solo dispositivos Apple como referencia y porque los viewports corresponden de forma exacta. Y debido a que hay alturas configuradas en `vh` el simular las mockups en *responsive* con largo continuo las romperá. 
+   - iPhone 6/7/8 para vista *mobile* 375x667
+   - ![screenshot1][1]
+   - iPad para vista *tablet* 768x1024
+   - ![screenshot2][2]
+   - MacBook Pro/Air 13" para vista *desktop* 1280x800 (como custom device)
+   - ![screenshot2][3]
+
+6. Se ha implementado una transición en los menús del dropdown de la vista mobile que responden al evento hover pero en el inspector deben ser clickeados para simular esta acción y poder observar la transición.
+![captura de proyecto][4]
+
+
 ### NOTAS:
 
-En un primer enfoque, consideraré realizarlo completamente con flex, distinguiendo 2 contenedores principales: 
-  1. el contenedor del navbar que tendrá que tener otro contenedor flex para los ítems del menú que se mostrarán sobre el hero-banner en tamaños *mobile*, 
-  2. y el contenedor del resto de la página que puede considerarse un `flex-column` con 3 elementos:
-     1. hero-banner,
-     2. contenido central,
-     3. footer con suscribe invertido (`writing-mode: vertical-lr`) 
-  3. Este `flex-column` solo cambia su espaciado en tamaño tablet pero en tamaño desktop debe presentarse como `flex-row-reverse`
+- Si necesito aplicar dos transformaciones dentro de 1 mismo punto en un `@keyframe` no deben escribirse como reglas separadas, sino encadenadas: 
+
+```css
+/* ESTO NO FUNCA, SOLO EJECUTA EL ÚLTIMO */
+@keyframes aparecer {
+  0% {transform: scale(0); transform: rotate(0deg)};
+  100% {transform: scale(1); transform: rotate(360deg)};
+}
+
+/* ESTO SI FUNCA */
+@keyframes aparecer {
+  0% {transform: scale(0) rotate(0deg)};
+  100% {transform: scale(1) rotate(360deg)};
+}
+```
+
+Una referencia en [Stackoverflow.][5]
 
 
+[0]:./assets/img/presentacion.png
+[1]:./assets/img/Screenshot2.png
+[2]:./assets/img/Screenshot3.png
+[3]:./assets/img/Screenshot4.png
+[4]:./assets/img/Screenshot1.png
+[5]:https://stackoverflow.com/questions/14384494/multiple-css-keyframe-animations-using-transform-property-not-working
 
 <!--TODO Al definir layout final, afinar alineación vertical logo/toggle-button -->
 <!--TODO Al definir layout final, afinar vh del hero-banner background -->
@@ -36,3 +74,4 @@ En un primer enfoque, consideraré realizarlo completamente con flex, distinguie
 <!--TODO  se podría intentar una transición en el ul dropdown -->
 
 <!--TODO  Mejorar botón con el svg de Bootstrap -->
+<!--* MacBook Pro/Air 13" -->

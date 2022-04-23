@@ -3,10 +3,24 @@
   font-family: $raleway;
 }
 
+.navbar {
+  font-family: $raleway;
+  font-size: $small;
+
+  @include responseTo($bpTablet) {
+    font-size: $medium;
+    font-weight: $bold;
+  }
+}
+
 .brand-title {
   font-family: $old-standard;
   font-size: $large;
   font-weight: $bold;
+
+  @include responseTo($bpTablet) {
+    font-size: $x-large;
+  }
 }
 
 h1, .main-content-suscribe {
@@ -16,24 +30,45 @@ h1, .main-content-suscribe {
 h1 {
   font-size: $xx-large;
   font-weight: $bold;
+
+  @include responseTo($bpTablet) {
+    font-size: $xxx-large;
+  }
 }
 
 .article-paragraph {
   font-size: $small;
   line-height: 1.5rem;
+
+  @include responseTo($bpTablet) {
+    font-size: $medium;
+  }
 }
 
 .suscribe-title {
   font-size: $x-large;
+  color: $light-gray;
   letter-spacing: 0.6px;
+
+  @include responseTo($bpTablet) {
+    font-size: $xx-large;
+  }
 }
 
 .suscribe-label {
   font-weight: $regular;
   color: $light-gray !important;
   font-size: $small;
+
+  @include responseTo($bpTablet) {
+    font-size: $medium;
+  }
 }
 
 .suscribe-vertical {
   font-weight: $bold;
+
+  @include responseTo($bpTablet) {
+    font-size: $x-large;
+  }
 }

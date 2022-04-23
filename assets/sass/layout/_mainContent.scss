@@ -1,5 +1,9 @@
 .main-content-article {
   margin: 2rem 2.25rem 2rem;
+
+  @include responseTo($bpTablet) {
+    margin: 1rem 13rem 4rem 5rem;
+  }
 }
 
 .content-title {
@@ -8,5 +12,17 @@
 
 .article-paragraph {
   color: $granite-gray;
-  margin: 0 0 1rem;
+  margin-bottom: 1rem;
+
+  @include responseTo($bpTablet) {
+    margin-bottom: 2rem;
+  }
+}
+
+.main-content-hide-sm {
+  display: none;
+
+  @include responseTo($bpTablet) {
+    display: inline;
+  }
 }

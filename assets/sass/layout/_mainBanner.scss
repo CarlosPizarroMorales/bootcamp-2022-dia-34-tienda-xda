@@ -3,4 +3,9 @@
   background: url('../img/imagen1.png');
   background-size: cover;
   background-position: top;
+
+  @include responseTo($bpTablet) {
+    height: 32.5vh;
+    background-position: top 32% left 0%;
+  }
 }
