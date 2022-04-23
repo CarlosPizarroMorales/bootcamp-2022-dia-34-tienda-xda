@@ -7,8 +7,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* 93px segun mockup */
-    height: 9vh;
+    // height: 9vh;
+    // para evitar que se rompa en desktop mejor px
+    height: 92px;
   }
 }
 
@@ -23,6 +24,11 @@
     height: 100%;
     width: 6rem;
     padding: 2.25rem 1.5rem 0;
+  }
+
+  @include responseTo($bpTablet) {
+    padding: 2.25rem 0;
+    text-align: center;
   }
 }
 
@@ -39,6 +45,10 @@
     display: block;
     width: 52vw;
     margin-right: 4rem;
+  }
+
+  @include responseTo($bpDesktop) {
+    width: 30vw;
   }
 }
 

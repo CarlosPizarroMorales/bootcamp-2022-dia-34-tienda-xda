@@ -8,4 +8,10 @@
     height: 32.5vh;
     background-position: top 32% left 0%;
   }
+
+  @include responseTo($bpDesktop) {
+    min-width: calc(100vw - 545px);
+    height: calc(100vh - 92px);
+    background-position: center;
+  }
 }

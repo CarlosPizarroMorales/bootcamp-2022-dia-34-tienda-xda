@@ -2,6 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include responseTo($bpDesktop) {
+    position: fixed;
+    bottom: 0;
+    min-width: 545px;;
+  }
 }
 
 .suscribe-newsletter {
@@ -12,6 +18,10 @@
 
   @include responseTo($bpTablet) {
     padding: 2rem 7rem 4.8rem 5rem;
+  }
+
+  @include responseTo($bpDesktop) {
+    padding: 2.25rem 7rem 4.8rem 5rem;
   }
 }
 

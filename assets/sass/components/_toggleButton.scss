@@ -1,26 +1,28 @@
 .toggle-button {
   position: absolute;
-  top: 1.125rem;
+  top: .75rem;
   right: 2.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 22px;
-  height: 18px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // width: 22px;
+  // height: 18px;
 
   @include responseTo($bpTablet) {
     display: none;
   }
 }
 
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  display: block;
-  background-color: black;
-  // border: 1px solid black;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
+//*********************
+// se ha reemplazado por un botón
+// .toggle-button .bar {
+//   height: 3px;
+//   width: 100%;
+//   display: block;
+//   background-color: black;
+//   // border: 1px solid black;
+//   border-top-left-radius: 20px;
+//   border-top-right-radius: 20px;
+//   border-bottom-left-radius: 20px;
+//   border-bottom-right-radius: 20px;
+// }
