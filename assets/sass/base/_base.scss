@@ -1,0 +1,6 @@
+.main {
+  @include responseTo($bpDesktop) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}

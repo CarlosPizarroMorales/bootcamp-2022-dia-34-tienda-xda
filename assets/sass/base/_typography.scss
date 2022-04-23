@@ -21,6 +21,10 @@
   @include responseTo($bpTablet) {
     font-size: $x-large;
   }
+
+  @include responseTo($bpDesktop) {
+    font-size: $xx-large;
+  }
 }
 
 h1, .main-content-suscribe {

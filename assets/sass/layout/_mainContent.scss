@@ -4,10 +4,15 @@
   @include responseTo($bpTablet) {
     margin: 1rem 13rem 4rem 5rem;
   }
+
+  @include responseTo($bpDesktop) {
+    margin: 3rem 5rem 4rem 5rem;
+  }
 }
 
 .content-title {
   margin-bottom: .5rem;
+  
 }
 
 .article-paragraph {
@@ -16,6 +21,10 @@
 
   @include responseTo($bpTablet) {
     margin-bottom: 2rem;
+  }
+
+  @include responseTo($bpDesktop) {
+    max-width: 70%;
   }
 }
 
